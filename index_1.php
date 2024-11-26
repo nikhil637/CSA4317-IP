@@ -1,8 +1,11 @@
 <?php
+error_reporting(E_ALL);  // Report all types of errors
+ini_set('display_errors', 1);  // Display errors on the page
+?>
+<?php
 // Initialize variables
 $net_taxable_income = $tax = $net_income_after_tax = "";
 
-// Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form input
     $salary = isset($_POST['salary']) ? (float) $_POST['salary'] : 0;
